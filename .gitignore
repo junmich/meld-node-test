@@ -1,0 +1,14 @@
+node_modules
+
+# config folders
+temp
+files
+
+# test files
+test.json
+
+# yarn error
+yarn-error.log
+
+# internal file
+.DS_Store

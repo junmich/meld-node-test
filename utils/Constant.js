@@ -1,0 +1,13 @@
+const PROVIDER_LOCAL = 'local';
+const PROVIDER_GOOGLE = 'google';
+const SEPARATOR = ':';
+const PRIVATE_KEY_MATCHER = 'PRIVATE';
+const PUBLIC_KEY_MATCHER = 'PUBLIC';
+
+module.exports = {
+    PROVIDER_LOCAL,
+    PROVIDER_GOOGLE,
+    SEPARATOR,
+    PRIVATE_KEY_MATCHER,
+    PUBLIC_KEY_MATCHER,
+};
