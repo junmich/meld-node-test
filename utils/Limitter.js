@@ -21,7 +21,13 @@ const logAction = (ip, method, url) => {
         if (fileEntry < 0) {
             fileAction.push({ ip, method, count: 1 });
         } else {
-            if (fileAction[fileEntry].count > 10) {
+            // skip test ip
+            if (fileAction[fileEntry].ip === '::ffff:127.0.0.1') {
+                return true;
+            } else if (fileAction[fileEntry].method === 'GET' && fileAction[fileEntry].count > Config.DOWNLOAD_LIMIT) {
+                return false;
+            }
+            if (fileAction[fileEntry].method === 'POST' && fileAction[fileEntry].count > Config.UPLOAD_LIMIT) {
                 return false;
             }
             fileAction[fileEntry].count += 1

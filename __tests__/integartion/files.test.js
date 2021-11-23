@@ -47,6 +47,8 @@ describe('Files API test', () => {
             .attach('file', `${__dirname}/test.json`);
         const resDelete = await request(app)
             .delete(`/files/${res.body.privateKey}`);
+
+        console.log(resDelete.body);
         expect(resDelete.status).toBe(200);
         expect(resDelete.body.message).toBe('Files deleted successfully.');
     });

@@ -2,7 +2,9 @@ node_modules
 
 # config folders
 temp
+tmp
 files
+temp-folder
 
 # test files
 test.json
@@ -12,3 +14,5 @@ yarn-error.log
 
 # internal file
 .DS_Store
+
+key.json
